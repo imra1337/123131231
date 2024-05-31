@@ -1,0 +1,13 @@
+{% autoescape off %}
+
+Чтобы начать процесс сброса пароля для вашей учетной записи {{ user.email }},
+нажмите на ссылку ниже:
+
+{{ protocol }}://{{ domain }}{% url 'password_reset_confirm' uidb64=uid token=token %}
+
+Если ссылка не работает, скопируйте и вставьте URL-адрес в новое окно браузера.
+вместо этого.
+
+Искренне,
+Команда Crowd Funding
+{% endautoescape %}
